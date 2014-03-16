@@ -157,8 +157,8 @@ jQuery(function ($) {
         var currentTime = videoPlayer.currentTime();
         videoPlayer.currentTime(currentTime - 10);
       }
-      if (event.keyCode == 38) {
-        // Up arrow: increase volume (1.0 is all the way up)
+      if (event.keyCode == 38 || event.keyCode == 107) {
+        // Up arrow & Plus key (+): increase volume (1.0 is all the way up)
         var currentVolume = videoPlayer.volume();
         videoPlayer.volume(currentVolume + 0.1);
       }
@@ -167,8 +167,8 @@ jQuery(function ($) {
         var currentTime = videoPlayer.currentTime();
         videoPlayer.currentTime(currentTime + 10);
       }
-      if (event.keyCode == 40) {
-        // Down arrow: decrease volume (0 is off, muted)
+      if (event.keyCode == 40 || event.keyCode == 109) {
+        // Down arrow & Minus key (-): decrease volume (0 is off, muted)
         var currentVolume = videoPlayer.volume();
         videoPlayer.volume(currentVolume - 0.1);
       }
